@@ -1,0 +1,148 @@
+.top-banner {
+    background-color: #39523f;
+    color: white;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-size: 14px;
+}
+
+.top-banner .carousel-item {
+    text-align: center;
+    padding: 8px 16px;
+}
+.navbar-nav .nav-link {
+margin-right: 1rem;
+color: black ;
+font-family: sans-serif;
+font-weight: normal;
+text-decoration: none;
+}
+
+.center-logo {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.icon-group svg {
+margin-left: 1rem;
+cursor: pointer;
+}
+
+.navbar1 {
+background-color: darkgrey ;
+padding-left: 5rem;
+padding-right: 5rem;
+}
+.navbar-nav1 {
+margin: 0 auto; /* Center the nav items */
+}
+.navbar-nav1 .nav-link1 {
+color: black ;
+font-family: sans-serif;
+font-weight: normal;
+text-decoration: none;
+margin: 0 1rem;
+}
+.top-banner1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .carousel-caption-custom {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    text-align: right;
+    color: white;
+  }
+
+  .carousel-caption-custom h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .carousel-caption-custom p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .carousel-caption-custom .btn {
+    margin: 10px 5px 0 0;
+  }
+ .carousel-caption-custom1{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    text-align: right;
+    color: black;
+  }
+  .carousel-caption-custom1 h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: black;
+  }
+  .carousel-caption-custom1 p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: black;
+  }
+  .carousel-caption-custom1 .btn {
+    margin: 10px 5px 0 0;
+  }
+  
+
+  .image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    transition: transform 0.4s ease;
+  }
+
+  .image-container:hover img {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .image-overlay h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+    justify-content: center;
+  }
+
+  .image-overlay p {
+    font-size: 1rem;
+    margin-bottom: auto;
+  }
+
+  .cta-buttons {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .image-container:hover .cta-buttons {
+    opacity: 1;
+  }
