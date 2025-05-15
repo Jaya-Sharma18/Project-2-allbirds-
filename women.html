@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">z
+<style>
+    .display {
+        display: flex;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+
+    .display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.card {
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+     html {
+    scroll-behavior: smooth;
+  }
+</style>
+</head>
+<body>
+    
+<!-- nav bar code -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Homes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- banner -->
+ <div class="container-fluid p-5 text-white text-center" style="background-image: url('https://www.shutterstock.com/image-photo/sexy-womans-female-smooth-legs-260nw-2276049977.jpg'); background-size: cover;">
+  <h1 class="display-4 fw-bold"> <span style="color: rgb(8, 8, 83) ; font-style: italic;font-weight: 900;" >Step into Style</span> </h1>
+  <p class="lead"><span style="color: red; text-decoration: underline;font-family:'Times New Roman', Times, serif, 'Arial Narrow', Arial, sans-serif;">Explore the latest trends in women’s footwear</span></p>
+  <a class="btn btn-light btn-lg" href="#products">Shop Now</a>
+</div>
+
+
+<div class="container mt-4">
+  <h4>Filter by Size:</h4>
+  <div class="btn-group mb-4" role="group" aria-label="Sizes">
+    <button type="button" class="btn btn-outline-primary">5</button>
+    <button type="button" class="btn btn-outline-primary">6</button>
+    <button type="button" class="btn btn-outline-primary">7</button>
+    <button type="button" class="btn btn-outline-primary">8</button>
+    <button type="button" class="btn btn-outline-primary">9</button>
+  </div>
+</div>
+
+
+
+<!-- card code -->
+ <div class="display">
+<div class="card" style="width: 18rem;">
+  <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Stilettos</h5>
+    <p class="card-text"> Stilettos: Sleek, slender heels that add instant glamour and height </p>
+    <a href="#" class="btn btn-primary">$700</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQbP6MvrfwjGYZhQIILV9O_0746vZxPi-eHA&s" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Platform Heels</h5>
+    <p class="card-text">Platform Heels: Bold and comfy height boosters with a chunky sole for extra support. </p>
+    <a href="#" class="btn btn-primary">$680</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdRXsD_QSM-UrvJl9a3WHNstmK3zNMhPZ8Uw&s" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Gladiator Sandals</h5>
+    <p class="card-text"> Bold, fierce, and timeless – conquer every step in Gladiator Sandals. </p>
+    <a href="#" class="btn btn-primary">$430</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcc9g7ZtgAEeZcDN11SmdePD5JDhJZeSqmDA&s" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Ballet Flats</h5>
+    <p class="card-text"> Graceful steps, effortless style – Ballet Flats for every occasion </p>
+    <a href="#" class="btn btn-primary">$300</a>
+  </div>
+</div>
+
+
+<div class="card" style="width: 18rem;">
+  <img src="https://images.unsplash.com/photo-1732708862072-d2f9e578e531?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9vdHMlMjBmb3IlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Boots</h5>
+    <p class="card-text">Boots season just got an upgrade.</p>
+    <a href="#" class="btn btn-primary">$530</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx-aRbD-cBgOJbY0mlOEbivF4hN6SfMXn5sw&s" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Sneakers</h5>
+    <p class="card-text">Move with style, powered by comfort – step up in Sneakers.</p>
+    <a href="#" class="btn btn-primary">$900</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQBWZTjjfOuqAwUCHgGmwFzIiV2YI3UgMBTw&s" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Flip-Flops</h5>
+    <p class="card-text">Easy, breezy, and ready to go – live light in Flip-Flops</p>
+    <a href="#" class="btn btn-primary">$120</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdmmOMgXODbebRC6bml03SqdnmkL6p1WBIA&s" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Kolhapuris</h5>
+    <p class="card-text"> Tradition meets trend – step into elegance with Kolhapuris.</p>
+    <a href="#" class="btn btn-primary">$1255</a>
+  </div>
+</div>
+</div>
+</body>
+</html>
