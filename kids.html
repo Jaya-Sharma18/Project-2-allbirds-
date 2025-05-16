@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <style>
+    .display {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .image-overlay-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+
+      color: rgb(104, 13, 13);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 20px;
+
+    }
+
+
+    .card {
+      transition: transform 0.5s;
+      margin-bottom: 2rem;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .Newdisplay {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Men</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="women.html">Women</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Socks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="NewArrival.html">New Arrivals</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="Scroll">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_2000/cms/6LEWxWJ68MmGFOQCxcSJaB/8d9343854729d94700ee2c9ba5f6c742/25Q2_RusticOrange_Site_ShoppableFeature_Desktop_US_2000x2000.jpg"
+            class="d-block w-100" style="height:1200px; object-fit: cover;  width: auto;" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_1000/cms/1F5DCNaZH9c8Qvf8p53Oa4/92ca7870d8d90d0b9b68f53bfe162d5d/25Q1_CanvasPiper_Site_ShoppableFeature_Desktop_2000x2000_02.png"
+            class="d-block w-100" style="height: 1200px; object-fit: cover;  width: auto;"  alt="...">
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_2000/cms/3BbtI1XSW6DmlVGN6QibAh/739eb6a5aea679ac28825f11b431d8cc/25Q2_Hanami_Plum_Site_ShoppableFeature_Mobile_1600x2000.png"
+            class="d-block w-100"  style="height: 1200px; object-fit: cover;  width: auto;" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <h1 style="font-family:cursive; color:rgb(201, 25, 25); font-weight: 400; font-style: oblique; background: fixed; background-color:white;">Explore More Men's Shoes</h1>
+
+
+  <div class="Newdisplay">
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_572/cms/12jnep8aBEjf6jhuZAKZaE/407ffc0adc4daac14da2aedb17663c44/25Q2_UtilityCollection_Site_ParentCollection_Card_Mens_Desktop_630x864.jpg"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text"></div>
+      <div class="card-body">
+        <h5 class="card-title">Embrace spring with the durable Utility Collection.</h5>
+
+
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_572/cms/2FW9UB54pfbzjYRMiWnVop/1cacb72b419a325fc4e7f53bd1736f7a/25Q1_CanvasPiper_Site_ParentCollection_Card_Site_630x864.png"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text"></div>
+      <div class="card-body">
+        <h5 class="card-title">Start with fresh Canvas</h5>
+
+
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_560,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/breadcrumbNavigationNode/en-US/images/4XkWseoM4kmcHIhBhLp1Hn/1"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text"></div>
+      <div class="card-body">
+        <h5 class="card-title">Sale Shoes</h5>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="display">
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_480,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5tgq3j39tdSKCKgKJsYUcg/1"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Runner Go</h5>
+        <p class="card-text">$120</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_600/cms/25l6N9sqRyQj1M3ckXTvrk/ef9a29897367b880c0e936d4f97322d3/A11510_25Q1_Canvas_Piper_Blizzard_Blizzard_PDP_LEFT-2000x2000.png"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Runner Go</h5>
+        <p class="card-text">$120</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_600/cms/6jDRW9nYTzDnMvqremGqT7/9d4b99b7f85a526f6cd03b29ec7f1f2c/A11444_25Q1_Tree_Dasher_2_Blizzard_Hanami_Night_Natural_White_PDP_LEFT-2000x2000.png"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Dasher 2</h5>
+        <p class="card-text">$135</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_600/cms/4yud5Ur0aIRjGnNonE0hpP/c867739fdbf9cd003b3a023af2238bca/A11187_24Q4_Tree_Glider_Natural_Black_Rugged_Khaki_PDP_LEFT-1000x1000.png"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Glidder</h5>
+        <p class="card-text">$110</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_600/cms/7KRAa1ZwLc515mwewVKMVU/96fe91f9445286000d6d1e942101fc61/A11394_25Q1_Wool_Runner_2_Rustic_Brown_Weathered_Grey_PDP_LEFT-2000x2000.png"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Wool Runner Go</h5>
+        <p class="card-text">$140</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/60nnZ6cza9axupGWcU9Yrk/1"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Dasher Relay</h5>
+        <p class="card-text">$110</p>
+
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/25l6N9sqRyQj1M3ckXTvrk/1"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">New Arrival</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Canvas Piper</h5>
+        <p class="card-text">$150</p>
+
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img
+        src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_480,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/4NNKemRZ6z8AS0SHE3G3LI/1"
+        class="card-img-top" alt="...">
+      <div class="image-overlay-text">Best selling</div>
+      <div class="card-body">
+        <h5 class="card-title">Men's Tree Glider</h5>
+        <p class="card-text">$105</p>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <footer class="bg-light text-dark pt-5 pb-4">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+  
+        <!-- Brand -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">Allbirds</h5>
+          <p>Comfortable, sustainable shoes for everyday life.</p>
+        </div>
+  
+        <!-- Links -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">Shop</h5>
+          <p><a href="#" class="text-dark text-decoration-none">Men</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">Women</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">New Arrivals</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">Sale</a></p>
+        </div>
+  
+        <!-- About -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">About</h5>
+          <p><a href="#" class="text-dark text-decoration-none">Sustainability</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">Our Story</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">Stores</a></p>
+          <p><a href="#" class="text-dark text-decoration-none">Careers</a></p>
+        </div>
+  
+        <!-- Contact -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+          <p><i class="bi bi-envelope-fill me-2"></i> support@allbirds.com</p>
+          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 123-4567</p>
+          <p><i class="bi bi-geo-alt-fill me-2"></i> San Francisco, CA</p>
+        </div>
+      </div>
+  
+      <hr class="mb-4">
+  
+      <!-- Footer Bottom -->
+      <div class="row align-items-center">
+        <div class="col-md-7 col-lg-8">
+          <p>© 2025 Allbirds. All rights reserved.</p>
+        </div>
+  
+        <div class="col-md-5 col-lg-4">
+          <div class="text-center text-md-right">
+            <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-dark me-4"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+
+</html>
