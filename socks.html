@@ -2,329 +2,750 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-    crossorigin="anonymous"></script>
-  <style>
-    .display {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-bottom: 2rem;
-      /* background-color: rgb(223, 166, 178); */
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allbirds Anytime Socks - Inspired</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+        /* Inspired by Allbirds style */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f2;
+            color: #333;
+        }
 
-    .image-overlay-text {
-      position: absolute;
-      top: 10px;
-      left: 10px;
+        .navbar {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
 
-      color: rgb(104, 13, 13);
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-size: 20px;
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            text-decoration: none;
+        }
 
-    }
+        .nav-link {
+            color: #737373;
+            text-decoration: none;
+            margin-left: 1rem;
+        }
 
+        .nav-link:hover {
+            color: #1a1a1a;
+        }
 
-    .card {
-      transition: transform 0.5s;
-      margin-bottom: 2rem;
-      background-color: rgb(178, 206, 206);
-    }
+        .hero {
+            background-color: #e9f5f2;
+            /* Light green/teal background */
+            padding: 4rem 2rem;
+            text-align: center;
+        }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
 
-    .Newdisplay {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-      margin-bottom: 2rem;
-      background-color: rgb(241, 207, 219);
-    }
-  </style>
+        .hero p {
+            color: #737373;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
+        .category-section {
+            padding: 3rem 2rem;
+        }
 
+        .category-title {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+        }
+
+        .category-description {
+            color: #737373;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .product-details {
+            padding: 1rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-color {
+            color: #737373;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+
+        .faq-section {
+            padding: 3rem 2rem;
+            background-color: #f2f2f2;
+        }
+
+        .faq-title {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .faq-item .faq-answer {
+            color: #737373;
+            display: none;
+            /* Initially hidden */
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .allbirds-approach {
+            padding: 3rem 2rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .approach-title {
+            font-size: 1.8rem;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .approach-item {
+            margin-bottom: 2rem;
+        }
+
+        .approach-item h3 {
+            font-size: 1.2rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .approach-item p {
+            color: #737373;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #f7f7f2;
+            padding: 4rem 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-heading {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .footer-link {
+            color: #f7f7f2;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
+        .newsletter {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .newsletter p {
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex-grow: 1;
+            background-color: #333;
+            color: #f7f7f2;
+        }
+
+        .newsletter-button {
+            padding: 0.75rem 1rem;
+            background-color: #f7f7f2;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .newsletter-button:hover {
+            background-color: #ddd;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (min-width: 768px) {
+            .newsletter {
+                grid-column: auto;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Men</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="women.html">Women</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="socks.html">Socks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="NewArrival.html">New Arrivals</a>
-          </li>
 
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
-  <div class="Scroll">
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="https://images.unsplash.com/photo-1631180543602-727e1197619d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNvY2tzfGVufDB8fDB8fHww"
-            class="d-block w-100" style="height:1200px; object-fit: cover;  width: auto;" alt="...">
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">allbirds</a>
+            <div>
+                <a class="nav-link" href="Men.html">Men</a>
+                <a class="nav-link" href="women.html">Women</a>
+                <a class="nav-link" href="socks.html">Socks</a>
+                <a class="nav-link" href="NewArrival.html">New Arrivals</a>
+                <a class="nav-link" href="#">Sustainability</a>
+                <a class="nav-link" href="#">Stores</a>
+                <a class="nav-link" href="#">Account</a>
+                <a class="nav-link" href="#">Cart</a>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img
-            src="https://images.unsplash.com/photo-1510672277783-ea03bdd8b602?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvY2tzfGVufDB8fDB8fHww"
-            class="d-block w-100" style="height: 1200px; object-fit: cover;  width: auto;"  alt="...">
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Anytime Socks</h1>
+            <p>Made with a blend of light, breathable materials like tree fiber and Organic Cotton, our socks keep
+                your feet cool, dry, and smiling (if feet could smile).</p>
         </div>
-        <div class="carousel-item">
-          <img
-            src="https://sp.yimg.com/ib/th?id=OPAC.D0gho7RR6sSi4g474C474&o=5&pid=21.1&w=160&h=105"
-            class="d-block w-100"  style="height: 1200px; object-fit: cover;  width: auto;" alt="...">
+    </header>
+
+    <section class="category-section">
+        <div class="container">
+            <h2 class="category-title">No Show Socks</h2>
+            <p class="category-description">Light, breathable and made to move and groove without budging.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/1YsQObtsIpVBX8QYyQe4lZ/1" alt="Natural Grey Heather/Deep Navy">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Natural Grey Heather/Deep Navy</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5mzPSA1TPqkBvJGJadKUxI/1" alt="Natural Grey Heather/Light Grey">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Natural Grey Heather/Light Grey</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5sztDMOkgmJf8k2vwr1ewk/1" alt="Deep Navy">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Deep Navy</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/1fuuAnBoafDjZy6dizXP0O/1" alt="Rugged Beige">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Rugged Beige</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/7f2u8JZomQqQTU1h54vp7y/1" alt="Medium Grey">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Medium Grey</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/21wwgluxjopqTEXIol42I6/3" alt="Blizzard">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Blizzard</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/4sPbkjGxwa7OBd6Q9YTg93/3" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$14</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
+    </section>
 
-
-  <h1 style="font-family:cursive; color:rgb(201, 25, 25); font-weight: 400; font-style: oblique; background: fixed; background-color:white;">Explore More Socks</h1>
-
-
-  <div class="Newdisplay">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://images.unsplash.com/photo-1613151848917-80e67f421fff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNvY2tzfGVufDB8fDB8fHww"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text"></div>
-      <div class="card-body">
-        <h5 class="card-title">Embrace spring with the durable Utility Collection.</h5>
-
-
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://media.istockphoto.com/id/1301888258/photo/legs-from-a-businessman-with-fabric-socks-winter-season-concept.webp?a=1&b=1&s=612x612&w=0&k=20&c=cMK-P92MvHvLgH2CGgx-L13Ib-gQ6U3H3kw5n41wH3o="
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text"></div>
-      <div class="card-body">
-        <h5 class="card-title">Start with fresh Canvas</h5>
-
-
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://images.unsplash.com/photo-1616531758364-731625b1f273?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c29ja3N8ZW58MHx8MHx8fDA%3D"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text"></div>
-      <div class="card-body">
-        <h5 class="card-title">ToeTally</h5>
-
-
-      </div>
-    </div>
-
-  </div>
-
-
-  <div class="display">
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://images.unsplash.com/photo-1589895869111-cab6bf8354c8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvY2tzfGVufDB8fDB8fHww"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">Socky
-</h5>
-        <p class="card-text">$120</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://media.istockphoto.com/id/1193256698/photo/enjoying-warm-tea-in-cozy-sock-on-a-cold-autumn-day.webp?a=1&b=1&s=612x612&w=0&k=20&c=qzYZJxbEfFBK_IH1NvyQzZedgQkitkt8cQcRDzgKmf8="
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">Heelicious
-</h5>
-        <p class="card-text">$120</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://media.istockphoto.com/id/1040590548/photo/cute-little-kids-in-christmas-socks-sitting-in-a-cosy-christmas-atmosphere.webp?a=1&b=1&s=612x612&w=0&k=20&c=ugCfydj7kCbi9DzdMjdKpb6hKvvhRNSoHO6MKrCdrBM="
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">Footloose
-</h5>
-        <p class="card-text">$135</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://plus.unsplash.com/premium_photo-1723642590072-d2e54de6c21e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNvY2tzfGVufDB8fDB8fHww"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">Ankles
-</h5>
-        <p class="card-text">$110</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://images.unsplash.com/photo-1542355581-caf7454785ca?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvY2tzfGVufDB8fDB8fHww"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">SnuggleToes
-</h5>
-        <p class="card-text">$140</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://tse2.mm.bing.net/th?id=OIP.8eZIFDS1UM2F0lr7XIbeqwHaHa&pid=Api&P=0&h=180"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title">CozyFeet
-</h5>
-        <p class="card-text">$110</p>
-
-      </div>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://tse1.mm.bing.net/th?id=OIP.ar-____uJc0TJhgwFNfH8gHaI9&pid=Api&P=0&h=180"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">New Arrival</div>
-      <div class="card-body">
-        <h5 class="card-title"> Footnotes
-</h5>
-        <p class="card-text">$150</p>
-
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img
-        src="https://tse4.mm.bing.net/th?id=OIP.EidH9UTY3XQ3fholdfWFZgHaKn&pid=Api&P=0&h=180"
-        class="card-img-top" alt="...">
-      <div class="image-overlay-text">Best selling</div>
-      <div class="card-body">
-        <h5 class="card-title">Socktopus
-</h5>
-        <p class="card-text">$105</p>
-
-      </div>
-    </div>
-
-  </div>
-
-
-
-  <footer class="bg-light text-dark pt-5 pb-4">
-    <div class="container text-center text-md-left">
-      <div class="row text-center text-md-left">
-  
-        <!-- Brand -->
-        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold">Allbirds</h5>
-          <p>Comfortable, sustainable shoes for everyday life.</p>
+    <section class="category-section">
+        <div class="container">
+            <h2 class="category-title">Ankle Socks</h2>
+            <p class="category-description">Designed to keep you comfortable for workouts or work.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/2zbRw4Y41d7E7d3XvOVOVz/1" alt="Deep Navy">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Deep Navy</p>
+                        <p class="product-price">$16</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/oPTrM0K59BTj2pzK7qSRi/1" alt="Rugged Beige">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Rugged Beige</p>
+                        <p class="product-price">$16</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/1zJn8fWj9dG5I9m4eykJq4/1" alt="Medium Grey">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Medium Grey</p>
+                        <p class="product-price">$16</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/16ctLOuqs2KA6FTDVYQRln/5" alt="Blizzard">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Blizzard</p>
+                        <p class="product-price">$16</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/32SdmIDMFyxcIk3IbNpGK9/4" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$16</p>
+                    </div>
+                </div>
+            </div>
         </div>
-  
-        <!-- Links -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold">Shop</h5>
-          <p><a href="#" class="text-dark text-decoration-none">Men</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Women</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Socks</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">New Arrivals</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Sale</a></p>
-        </div>
-  
-        <!-- About -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold">About</h5>
-          <p><a href="#" class="text-dark text-decoration-none">Sustainability</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Our Story</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Stores</a></p>
-          <p><a href="#" class="text-dark text-decoration-none">Careers</a></p>
-        </div>
-  
-        <!-- Contact -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
-          <p><i class="bi bi-envelope-fill me-2"></i> support@allbirds.com</p>
-          <p><i class="bi bi-telephone-fill me-2"></i> +1 (800) 123-4567</p>
-          <p><i class="bi bi-geo-alt-fill me-2"></i> San Francisco, CA</p>
-        </div>
-      </div>
-  
-      <hr class="mb-4">
-  
-      <!-- Footer Bottom -->
-      <div class="row align-items-center">
-        <div class="col-md-7 col-lg-8">
-          <p>© 2025 Allbirds. All rights reserved.</p>
-        </div>
-  
-        <div class="col-md-5 col-lg-4">
-          <div class="text-center text-md-right">
-            <a href="#" class="text-dark me-4"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-dark me-4"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-dark me-4"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="text-dark"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  
+    </section>
 
+    <section class="category-section">
+        <div class="container">
+            <h2 class="category-title">Crew Socks</h2>
+            <p class="category-description">A classic crew height sock designed to keep you comfortable whether it’s
+                the workweek or the weekend.</p>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/q2ijrQq9tVVnCwAyCR9wz/1" alt="Sheep">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Sheep</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/7pCIW0q0hrvYmHsIWyy2ME/1" alt="Cloudstripe">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Cloudstripe</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/K69J21RDPnRkzVHo9m8s1/1" alt="Kiwi Bird">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Kiwi Bird</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/2ypNO2U4mzEVw0OMUUYJYM/1" alt="NZ Map">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">NZ Map</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/20VWnHbTlPhEWPynXkTcSm/1" alt="Natural Grey Heather/Deep Stripe">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Natural Grey Heather/Deep Stripe</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5Taveo1sbDQCqbf1wcMztY/1" alt="Natural Grey Heather/Light Stripe">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Natural Grey Heather/Light Stripe</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/1njCUiMSDKRJAkHmTRfJ2i/1" alt="Deep Navy">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Deep Navy</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/2ujoOaLQW2ITsRV02tf9Tv/1" alt="Rugged Beige">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Rugged Beige</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/2KbFNw4LRTOaRzV7m5rl7i/1" alt="Medium Grey">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Medium Grey</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/2YJWDivoSTXAk5mv1d0Bxi/5" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$18</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/32Qcb6co7A6oWdoRruN7yR/3" alt="Blizzard/Medium Grey/Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Blizzard/Medium Grey/Natural Black</p>
+                        <p class="product-price">$48</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="crew-sock12.jpg" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$48</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="container">
+            <h2 class="category-title">3-Pack Socks</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/DXCB6JR6andksVU0MF0um/1" alt="Blizzard">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Blizzard</p>
+                        <p class="product-price">$30</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5TAkvKFyNnmVvT1ZI9WHRk/1" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$30</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5JeUaH1FopsJqOzMWfsDBp/1" alt="Blizzard/Medium Grey/Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime No Show Sock</h3>
+                        <p class="product-color">Blizzard/Medium Grey/Natural Black</p>
+                        <p class="product-price">$30</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/1d6HRB7qb2AMgPxmMIkTdb/1" alt="Blizzard">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Blizzard</p>
+                        <p class="product-price">$36</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/4zX910uYiOvUKNNoTIDyws/1" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$36</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5eZU5BILtp81zmOxh2rqjB/1" alt="Blizzard/Medium Grey/Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Ankle Sock</h3>
+                        <p class="product-color">Blizzard/Medium Grey/Natural Black</p>
+                        <p class="product-price">$36</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="3pack-sock7.jpg" alt="Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Natural Black</p>
+                        <p class="product-price">$48</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_427,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/593Z1f9uN3Ei5pp0N2vOO0/1" alt="Blizzard/Medium Grey/Natural Black">
+                    <div class="product-details">
+                        <h3 class="product-name">Anytime Crew Sock</h3>
+                        <p class="product-color">Blizzard/Medium Grey/Natural Black</p>
+                        <p class="product-price">$48</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="faq-title">Questions? We've Got Answers.</h2>
+            <div class="faq-item">
+                <h4>NO-SHOW SOCKS VERSUS CREW SOCKS: WHICH IS BETTER?</h4>
+                <div class="faq-answer">
+                    <p>The best sock length depends on your preference and the shoes you're wearing. No-show socks are
+                        ideal for a clean look with sneakers and loafers, while crew socks offer more coverage and can
+                        be paired with various footwear.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h4>WHAT IS THE MOST SUSTAINABLE MATERIAL FOR SOCKS?</h4>
+                <div class="faq-answer">
+                    <p>Sustainable materials like organic cotton, TENCEL™ Lyocell (derived from eucalyptus), and recycled
+                        fibers are excellent choices for eco-conscious socks due to their lower environmental impact.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h4>WHAT ARE SUSTAINABLE SOCKS?</h4>
+                <div class="faq-answer">
+                    <p>Sustainable socks are made using environmentally friendly materials and production processes
+                        that minimize waste, conserve resources, and reduce carbon footprint. Look for certifications
+                        and brands that prioritize ethical and sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="allbirds-approach">
+        <div class="container">
+            <h2 class="approach-title">The Allbirds Approach</h2>
+            <div class="row">
+                <div class="col-md-4 approach-item">
+                    <h3>Wear-All-Day Comfort</h3>
+                    <p>Lightweight, bouncy, and wildly comfortable: Allbirds shoes make any outing feel effortless.
+                        Slip in, lace up, or slide them on and enjoy the comfy support. <a href="#">Learn More</a></p>
+                </div>
+                <div class="col-md-4 approach-item">
+                    <h3>Sustainability In Every Step</h3>
+                    <p>From materials to transport, we’re working to reduce our carbon footprint to near zero. Holding
+                        ourselves accountable and striving for climate goals isn’t a 30-year goal—it’s now. <a
+                            href="#">Learn More</a></p>
+                </div>
+                <div class="col-md-4 approach-item">
+                    <h3>Materials From The Earth</h3>
+                    <p>We replace petroleum-based synthetics with natural alternatives wherever we can. Like using wool,
+                        tree fiber, and sugar cane. They’re soft, breathable, and better for the planet—win, win, win.
+                        <a href="#">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="newsletter">
+                <p>Enter your email to stay in touch!</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email">
+                    <button type="submit" class="newsletter-button">Sign Up</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+                <div>
+                    <h6 class="footer-heading">Help</h6>
+                    <a href="#" class="footer-link">Chat with us</a>
+                    <a href="#" class="footer-link">1-888-963-8944</a>
+                    <a href="#" class="footer-link">1-877-255-2473 (Text)</a>
+                    <a href="#" class="footer-link">help@allbirds.com</a>
+                    <a href="#" class="footer-link">Returns/Exchanges</a>
+                    <a href="#" class="footer-link">FAQ/Contact Us</a>
+                    <a href="#" class="footer-link">Afterpay</a>
+                </div>
+                <div>
+                    <h6 class="footer-heading">Shop</h6>
+                    <a href="#" class="footer-link">Men's Shoes</a>
+                    <a href="#" class="footer-link">Women's Shoes</a>
+                    <a href="#" class="footer-link">Men's Apparel</a>
+                    <a href="#" class="footer-link">Women's Apparel</a>
+                    <a href="#" class="footer-link">Socks</a>
+                    <a href="#" class="footer-link">Gift Cards</a>
+                    <a href="#" class="footer-link">Refer a Friend</a>
+                </div>
+                <div>
+                    <h6 class="footer-heading">Company</h6>
+                    <a href="#" class="footer-link">Our Stores</a>
+                    <a href="#" class="footer-link">Our Story</a>
+                    <a href="#" class="footer-link">Our Materials</a>
+                    <a href="#" class="footer-link">Sustainability</a>
+                    <a href="#" class="footer-link">Investors</a>
+                    <a href="#" class="footer-link">Shoe Care</a>
+                    <a href="#" class="footer-link">Affiliates</a>
+                    <a href="#" class="footer-link">Bulk Orders</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Press</a>
+                    <a href="#" class="footer-link">Allbirds Responsible Disclosure Program</a>
+                    <a href="#" class="footer-link">California Transparency Act</a>
+                    <a href="#" class="footer-link">Community Offers</a>
+                    <a href="#" class="footer-link">Our Blog</a>
+                    <a href="#" class="footer-link">Patents</a>
+                </div>
+                <div>
+                    <h6 class="footer-heading">Follow the Flock</h6>
+                    <p class="footer-link">Exclusive offers, a heads up on new things, and sightings of Allbirds in the
+                        wild. Oh, we have cute sheep too. #weareallbirds</p>
+                    <div>
+                        <a href="#" class="footer-link">Facebook</a>
+                        <a href="#" class="footer-link">Instagram</a>
+                        <a href="#" class="footer-link">Twitter</a>
+                        <a href="#" class="footer-link">Pinterest</a>
+                        <a href="#" class="footer-link">YouTube</a>
+                        <a href="#" class="footer-link">TikTok</a>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="footer-heading">Certified</h6>
+                    <a href="#" class="footer-link">B Corporation</a>
+                </div>
+                <div>
+                    <h6 class="footer-heading">Countries</h6>
+                    <div>
+                        <a href="#" class="footer-link">USA</a>
+                        <a href="#" class="footer-link">Canada</a>
+                        <a href="#" class="footer-link">UK</a>
+                        <a href="#" class="footer-link">Europe</a>
+                        <a href="#" class="footer-link">Japan</a>
+                        <a href="#" class="footer-link">Korea</a>
+                        <a href="#" class="footer-link">China</a>
+                        <a href="#" class="footer-link">Australia</a>
+                        <a href="#" class="footer-link">New Zealand</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 Allbirds, Inc. All Rights Reserved. <a href="#" class="footer-link">Terms</a> | <a href="#"
+                        class="footer-link">Privacy</a> | <a href="#" class="footer-link">Accessibility</a> | <a href="#"
+                        class="footer-link">Do Not Sell My Personal Information</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous">
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('h4');
+                question.addEventListener('click', function () {
+                    item.classList.toggle('open');
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
