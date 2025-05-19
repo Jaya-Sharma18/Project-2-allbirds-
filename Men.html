@@ -11,12 +11,26 @@
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
   <style>
+  
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+  gap: 40px; 
+}
+
+
+
     .display {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      justify-content: center;
-      margin-bottom: 2rem;
+      justify-content:space-evenly;
+      overflow: hidden; 
+      min-height: 400px;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
 
     .image-overlay-text {
@@ -34,7 +48,9 @@
 
     .card {
       transition: transform 0.5s;
-      margin-bottom: 2rem;
+      
+      justify-content: space-evenly;
+      
     }
 
     .card:hover {
@@ -44,10 +60,23 @@
     .Newdisplay {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
+      column-gap: 30px;
+      row-gap: 30px;
+      justify-content: space-evenly;
       margin-bottom: 2rem;
+      padding-top: 30px;
+      padding-bottom: 30px;
     }
+
+    .Scroll .carousel-item {
+  height: 600px; 
+}
+
+.Scroll .carousel-item img {
+  height: 1000px;
+  object-fit: cover;
+}
+
   </style>
 
 
@@ -86,19 +115,20 @@
   <div class="Scroll">
     <div id="carouselExampleFade" class="carousel slide carousel-fade">
       <div class="carousel-inner">
-        <div class="carousel-item active" style="height: 1200px;">
+        <div class="carousel-item active">
           <img
-            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_2000/cms/6LEWxWJ68MmGFOQCxcSJaB/8d9343854729d94700ee2c9ba5f6c742/25Q2_RusticOrange_Site_ShoppableFeature_Desktop_US_2000x2000.jpg"
+            src="https://cdn.allbirds.com/image/upload/f_auto%2Cq_auto%2Cw_630/cms/6RALlmEMyVxF4XFKZxteDn/cb3da33d9b62aaaa55218f2a5dab94b2/24Q3_SeasonalCore_July_TreeProduct4_Site_LandingPage_CTACarousel_IMG_Mobile_630x894_Right.jpg"
             class="d-block w-100" style=" object-fit: cover;  width: auto;" alt="...">
         </div>
-        <div class="carousel-item" style="height: 1200px; ">
+        <div class="carousel-item">
+
           <img
-            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_1000/cms/1F5DCNaZH9c8Qvf8p53Oa4/92ca7870d8d90d0b9b68f53bfe162d5d/25Q1_CanvasPiper_Site_ShoppableFeature_Desktop_2000x2000_02.png"
+            src="https://cdn.allbirds.com/image/upload/f_auto%2Cq_auto%2Cw_1000/cms/6bCVo25T3nwOQbQif6sJul/b80e56cdbd114db3b663dfa0efec05c1/25Q1_FebBAU_Site_LifestyleCarousel_Mens_Bestsellers_2000x2000_EUUK_01.jpg"
             class="d-block w-100" style=" object-fit: cover;  width: auto;"  alt="...">
         </div>
         <div class="carousel-item">
           <img
-            src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_2000/cms/3BbtI1XSW6DmlVGN6QibAh/739eb6a5aea679ac28825f11b431d8cc/25Q2_Hanami_Plum_Site_ShoppableFeature_Mobile_1600x2000.png"
+            src="https://cdn.allbirds.com/image/upload/f_auto%2Cq_auto%2Cw_1110/cms/3KtGDME1ciXKltFSxoaRsp/491224750f81d61ff0443416348bf86e/LandingPage_Asset_Decorate_Carousel_Tree-Dasher_1110x1110.jpg"
             class="d-block w-100"  style="height: 1200px; object-fit: cover;  width: auto;" alt="...">
         </div>
       </div>
@@ -114,10 +144,14 @@
   </div>
 
 
-  <h1 style="font-family:cursive; color:rgb(17, 16, 16); font-weight: 400; font-style: oblique; background: fixed; background-color:white;margin-top: 20px;">Explore More Men's Shoes</h1>
+  <h1 style=" background-color: #e0f7fa; font-family: Georgia, 'Times New Roman', Times, serif; color:rgb(17, 16, 16); font-weight: 400; font-style: oblique; background: fixed; background-color:white;margin-top: 20px;">Explore More Men's Shoes</h1>
 
 
+<<<<<<< HEAD
   <div class="Newdisplay" style="margin-top: 30px;background-color:thistle">
+=======
+  <div class="Newdisplay"style="background-color: 	#f3f0f7;">
+>>>>>>> f60547a17d99ecdfc08654a66fb76df725b17667
     <div class="card" style="width: 18rem;">
       <img
         src="https://cdn.allbirds.com/image/upload/f_auto,q_auto,w_572/cms/12jnep8aBEjf6jhuZAKZaE/407ffc0adc4daac14da2aedb17663c44/25Q2_UtilityCollection_Site_ParentCollection_Card_Mens_Desktop_630x864.jpg"
@@ -146,7 +180,7 @@
         class="card-img-top" alt="...">
       <div class="image-overlay-text"></div>
       <div class="card-body">
-        <h5 class="card-title">Sale Shoes</h5>
+        <h5 class="card-title">Start with fresh Canvas</h5>
 
 
       </div>
@@ -155,7 +189,11 @@
   </div>
 
 
+<<<<<<< HEAD
   <div class="display" style="background-color:rgb(179, 182, 186)">
+=======
+  <div class="display" style="background-color: 	#f0f4f8;  height: fit-content;">
+>>>>>>> f60547a17d99ecdfc08654a66fb76df725b17667
     <div class="card" style="width: 18rem;">
       <img
         src="https://cdn.allbirds.com/image/fetch/q_auto,f_auto/w_480,f_auto,q_auto/https://cdn.allbirds.com/image/upload/f_auto,q_auto/v1/production/colorway/en-US/images/5tgq3j39tdSKCKgKJsYUcg/1"
@@ -259,13 +297,13 @@
     <div class="container text-center text-md-left">
       <div class="row text-center text-md-left">
   
-        <!-- Brand -->
+        
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-4 font-weight-bold">Allbirds</h5>
           <p>Comfortable, sustainable shoes for everyday life.</p>
         </div>
   
-        <!-- Links -->
+        
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h5 class="text-uppercase mb-4 font-weight-bold">Shop</h5>
           <p><a href="#" class="text-dark text-decoration-none">Men</a></p>
@@ -274,7 +312,7 @@
           <p><a href="#" class="text-dark text-decoration-none">Sale</a></p>
         </div>
   
-        <!-- About -->
+        
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
           <h5 class="text-uppercase mb-4 font-weight-bold">About</h5>
           <p><a href="#" class="text-dark text-decoration-none">Sustainability</a></p>
@@ -283,7 +321,7 @@
           <p><a href="#" class="text-dark text-decoration-none">Careers</a></p>
         </div>
   
-        <!-- Contact -->
+        
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
           <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
           <p><i class="bi bi-envelope-fill me-2"></i> support@allbirds.com</p>
@@ -294,7 +332,7 @@
   
       <hr class="mb-4">
   
-      <!-- Footer Bottom -->
+      
       <div class="row align-items-center">
         <div class="col-md-7 col-lg-8">
           <p>© 2025 Allbirds. All rights reserved.</p>

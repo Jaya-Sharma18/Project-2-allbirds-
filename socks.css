@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa; /* Light background from Bootstrap */
+    color: #212529; /* Dark text from Bootstrap */
+    margin-top: 56px; /* Adjust for fixed navbar height */
+}
+
+header {
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.socks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly wider min width for Bootstrap containers */
+    gap: 20px;
+}
+
+.sock-item {
+    background-color: #fff;
+    border: 1px solid #dee2e6; /* Light border from Bootstrap */
+    border-radius: 0.375rem; /* Rounded corners from Bootstrap */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Subtle shadow from Bootstrap */
+}
+
+.sock-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem; /* Slightly smaller rounded corners for images */
+    margin-bottom: 10px;
+}
+
+.sock-item h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1rem; /* Slightly smaller heading for better fit */
+}
+
+.sock-item .price {
+    color: #198754; /* Success color from Bootstrap */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* The button styles are now handled by Bootstrap's .btn-primary class */
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #6c757d; /* Secondary text color from Bootstrap */
+}
